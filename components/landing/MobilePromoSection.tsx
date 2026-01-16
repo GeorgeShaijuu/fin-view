@@ -30,6 +30,7 @@ export function MobilePromoSection() {
                     start: "top 60%",
                 }
             });
+            ScrollTrigger.refresh();
         }, sectionRef);
 
         return () => ctx.revert();

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { steps } from "@/lib/demo-data";
 import Image from "next/image";
@@ -24,6 +25,7 @@ export function StepsSection() {
                     start: "top 70%",
                 }
             });
+            ScrollTrigger.refresh();
         }, sectionRef);
 
         return () => ctx.revert();
@@ -52,9 +54,9 @@ export function StepsSection() {
                                     {step.description}
                                 </p>
 
-                                <div className="flex items-center text-primary font-semibold text-sm opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                                <Link href="/trade" className="flex items-center text-primary font-semibold text-sm opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                                     Learn more <ArrowRight className="w-4 h-4 ml-2" />
-                                </div>
+                                </Link>
                             </div>
                         )
                     })}

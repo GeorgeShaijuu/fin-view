@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { services } from "@/lib/demo-data";
 import { ArrowRight, Zap, Percent, Headphones } from "lucide-react";
@@ -29,6 +30,7 @@ export function ServicesSection() {
                     start: "top 80%",
                 }
             });
+            ScrollTrigger.refresh();
         }, sectionRef);
 
         return () => ctx.revert();
@@ -43,9 +45,9 @@ export function ServicesSection() {
                         <p className="text-muted-foreground">
                             Engineered for performance and aesthetics. The ultimate trading companion.
                         </p>
-                        <button className="mt-8 px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-colors">
+                        <Link href="/trade" className="mt-8 px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-colors inline-block">
                             Technical Specs
-                        </button>
+                        </Link>
                     </div>
 
                     <div className="lg:w-2/3 grid md:grid-cols-2 gap-6">

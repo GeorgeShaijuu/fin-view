@@ -13,12 +13,12 @@ export function Footer() {
                         <p>Our support team is available 24/7 to assist you.</p>
                     </div>
                     <div className="flex gap-4">
-                        <button className="px-6 py-3 bg-white text-slate-900 rounded-xl font-bold hover:bg-slate-200 transition-colors">
+                        <Link href="/trade" className="px-6 py-3 bg-white text-slate-900 rounded-xl font-bold hover:bg-slate-200 transition-colors">
                             Online Chat
-                        </button>
-                        <button className="px-6 py-3 border border-white/20 text-white rounded-xl font-bold hover:bg-white/10 transition-colors">
+                        </Link>
+                        <Link href="/trade" className="px-6 py-3 border border-white/20 text-white rounded-xl font-bold hover:bg-white/10 transition-colors">
                             Contact Us
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
