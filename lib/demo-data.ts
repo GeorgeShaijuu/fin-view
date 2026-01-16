@@ -1,60 +1,60 @@
 
 export const services = [
     {
-        title: "Fast Execution",
-        description: "Lightning fast trade execution with zero latency.",
+        title: "OLED Retina Display",
+        description: "Crystal clear 60Hz refresh rate for real-time market data.",
         icon: "Zap",
     },
     {
-        title: "Low Commission",
-        description: "Competitive rates for high volume traders.",
-        icon: "Percent",
+        title: "WiFi 6E Connectivity",
+        description: "Instant sync with your portfolio via ultra-fast connection.",
+        icon: "Percent", // Keeping generic icon for now
     },
     {
-        title: "Expert Support",
-        description: "24/7 localized support in your language.",
-        icon: "Headphones",
+        title: "Premium Build",
+        description: "Machined aluminum unibody that fits perfectly on your desk.",
+        icon: "Headphones", // Keeping generic icon for now
     },
 ];
 
 export const analytics = [
     {
-        title: "Market Trends",
-        value: "+12.5%",
+        title: "Real-time Sync",
+        value: "< 50ms",
         trend: "up",
-        description: "Global markets are showing positive momentum this week."
+        description: "Latency between market movement and your device display."
     },
     {
-        title: "Volatility Index",
-        value: "14.2",
-        trend: "down",
-        description: "Volatility has decreased, suggesting a stable market."
+        title: "Battery Life",
+        value: "48 Hrs",
+        trend: "up",
+        description: "Continuous always-on display with single charge."
     },
     {
-        title: "Trading Volume",
-        value: "$4.2B",
+        title: "Active Users",
+        value: "12k+",
         trend: "up",
-        description: "High trading volume indicates strong investor interest."
+        description: "Traders trusting their setup to Finview Device."
     }
 ]
 
 export const products = [
     {
-        title: "Stock Trading",
-        description: "Access to over 15,000 global stocks.",
+        title: "Finview One",
+        description: "The classic desktop ticker for minimalists.",
         icon: "BarChart3",
         color: "bg-emerald-500",
     },
     {
-        title: "Crypto Assets",
-        description: "Trade top cryptocurrencies with ease.",
-        icon: "Bitcoin",
+        title: "Finview Pro",
+        description: "Dual-screen setup for advanced monitoring.",
+        icon: "Bitcoin", // Placeholder
         color: "bg-blue-500",
     },
     {
-        title: "ETFs & Indices",
-        description: "Diversify your portfolio with funds.",
-        icon: "PieChart",
+        title: "Custom Mounts",
+        description: "VESA compatible mounts for your trading station.",
+        icon: "PieChart", // Placeholder
         color: "bg-indigo-500",
     },
 ];
@@ -62,22 +62,22 @@ export const products = [
 export const steps = [
     {
         number: "01",
-        title: "Register",
-        description: "Create an account in minutes."
+        title: "Unbox & Power On",
+        description: "Plug in your Finview device using the included USB-C cable."
     },
     {
         number: "02",
-        title: "Verify",
-        description: "Verify your identity securely."
+        title: "Connect WiFi",
+        description: "Use the mobile app to pair the device to your network."
     },
     {
         number: "03",
-        title: "Deposit",
-        description: "Add funds via card or transfer."
+        title: "Link Portfolio",
+        description: "Select which stocks/crypto you want to track."
     },
     {
         number: "04",
-        title: "Trade",
-        description: "Start trading immediately."
+        title: "Sync & Track",
+        description: "Watch your desk come alive with real-time market action."
     }
 ]

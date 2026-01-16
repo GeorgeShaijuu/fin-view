@@ -32,7 +32,7 @@ export function StepsSection() {
     return (
         <section ref={sectionRef} className="py-20 bg-white">
             <div className="container mx-auto px-6">
-                <h2 className="text-4xl font-bold mb-16 text-center">Start trading in 4 steps</h2>
+                <h2 className="text-4xl font-bold mb-16 text-center">Setup in 30 Seconds</h2>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {steps.map((step, idx) => {

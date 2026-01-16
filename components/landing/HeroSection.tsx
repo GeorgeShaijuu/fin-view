@@ -54,15 +54,15 @@ export function HeroSection() {
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                             </span>
-                            Waitlist v1.0
+                            Pre-order Batch #3
                         </div>
                         <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1] mb-6">
-                            Trade on the <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-600">Forex Exchange</span>
+                            The Market on <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-600">Your Desk.</span>
                         </h1>
                         <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-                            The best conditions for trading on the financial markets.
-                            Low spreads, instant execution, and 24/7 support.
+                            Track your portfolio in real-time with Finview Display.
+                            The dedicated IoT device that keeps you connected to the markets, without the distractions.
                         </p>
 
                         <div className="flex flex-wrap items-center gap-4">

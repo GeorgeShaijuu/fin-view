@@ -39,12 +39,12 @@ export function ServicesSection() {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
                     <div className="lg:w-1/3">
-                        <h2 className="text-4xl font-bold mb-4">Brokerage <br /> services <ArrowRight className="inline-block ml-2 w-8 h-8 text-primary" /></h2>
+                        <h2 className="text-4xl font-bold mb-4">Device <br /> Features <ArrowRight className="inline-block ml-2 w-8 h-8 text-primary" /></h2>
                         <p className="text-muted-foreground">
-                            We provide the best conditions for trading on the financial markets.
+                            Engineered for performance and aesthetics. The ultimate trading companion.
                         </p>
                         <button className="mt-8 px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-colors">
-                            More details
+                            Technical Specs
                         </button>
                     </div>
 
@@ -63,8 +63,8 @@ export function ServicesSection() {
                         })}
                         <div className="service-card p-8 bg-slate-900 text-white rounded-[2rem] shadow-lg flex flex-col justify-between">
                             <div>
-                                <h3 className="text-xl font-bold mb-3">Start Trading Today</h3>
-                                <p className="text-slate-400 text-sm">Join over 2 million traders.</p>
+                                <h3 className="text-xl font-bold mb-3">Order Now</h3>
+                                <p className="text-slate-400 text-sm">Join the waitlist for Batch #3.</p>
                             </div>
                             <button className="mt-6 w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:bg-white hover:text-black transition-colors self-end">
                                 <ArrowRight className="w-5 h-5" />

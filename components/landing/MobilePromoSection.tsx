@@ -44,12 +44,11 @@ export function MobilePromoSection() {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="promo-content">
                         <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                            Market always <br />
-                            at hand <ArrowRight className="inline-block ml-4 text-primary w-10 h-10" />
+                            Control from <br />
+                            Anywhere <ArrowRight className="inline-block ml-4 text-primary w-10 h-10" />
                         </h2>
                         <p className="text-lg text-muted-foreground mb-10 max-w-md">
-                            Get full access to the market from any device.
-                            Track your portfolio, execute trades, and analyze charts on the go.
+                            Use the Finview Mobile App to configure your device, manage Wi-Fi, and select which stocks to display.
                         </p>
 
                         <div className="flex gap-4">

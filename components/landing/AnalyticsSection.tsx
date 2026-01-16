@@ -32,7 +32,7 @@ export function AnalyticsSection() {
     return (
         <section ref={sectionRef} className="py-20 bg-secondary/30">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl font-bold mb-10">Market Analytics</h2>
+                <h2 className="text-3xl font-bold mb-10">Performance Metrics</h2>
 
                 <div className="grid md:grid-cols-3 gap-6">
                     {analytics.map((item, idx) => (
