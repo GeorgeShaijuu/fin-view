@@ -51,20 +51,20 @@ export function ChartWrapper() {
         const chart = createChart(chartContainerRef.current, {
             layout: {
                 background: { type: ColorType.Solid, color: "transparent" },
-                textColor: "rgba(255, 255, 255, 0.5)",
+                textColor: "#334155", // slate-700
             },
             grid: {
-                vertLines: { color: "rgba(255, 255, 255, 0.05)" },
-                horzLines: { color: "rgba(255, 255, 255, 0.05)" },
+                vertLines: { color: "rgba(0, 0, 0, 0.05)" },
+                horzLines: { color: "rgba(0, 0, 0, 0.05)" },
             },
             crosshair: {
                 mode: CrosshairMode.Normal,
             },
             rightPriceScale: {
-                borderColor: "rgba(255, 255, 255, 0.1)",
+                borderColor: "rgba(0, 0, 0, 0.1)",
             },
             timeScale: {
-                borderColor: "rgba(255, 255, 255, 0.1)",
+                borderColor: "rgba(0, 0, 0, 0.1)",
                 timeVisible: true,
             },
 
@@ -104,23 +104,22 @@ export function ChartWrapper() {
     const addSeries = (chart: IChartApi, type: "candle" | "area") => {
         if (type === "area") {
             const areaSeries = chart.addSeries(AreaSeries, {
-                lineColor: "#3b82f6",
-                topColor: "rgba(59, 130, 246, 0.4)",
-                bottomColor: "rgba(59, 130, 246, 0.0)",
+                lineColor: "#10b981", // primary mint
+                topColor: "rgba(16, 185, 129, 0.4)",
+                bottomColor: "rgba(16, 185, 129, 0.0)",
                 lineWidth: 2,
             });
             areaSeries.setData(MOCK_DATA);
             seriesRef.current = areaSeries;
 
-            // Animate the line drawing? (Hard with library, but we simulated entry with container)
             chart.timeScale().fitContent();
 
         } else {
             const candleSeries = chart.addSeries(CandlestickSeries, {
-                upColor: "#22c55e",
+                upColor: "#10b981",
                 downColor: "#ef4444",
                 borderVisible: false,
-                wickUpColor: "#22c55e",
+                wickUpColor: "#10b981",
                 wickDownColor: "#ef4444",
             });
             candleSeries.setData(MOCK_DATA);
@@ -131,22 +130,22 @@ export function ChartWrapper() {
 
 
     return (
-        <div className="glass-card rounded-2xl p-6 h-full flex flex-col relative overflow-hidden">
+        <div className="bg-white border border-slate-200 rounded-2xl p-6 h-full flex flex-col relative overflow-hidden shadow-sm">
             <div className="flex items-center justify-between mb-6 z-10 relative">
                 <div className="flex flex-col">
-                    <h2 className="text-3xl font-bold text-white tracking-tight">$189.45</h2>
+                    <h2 className="text-3xl font-bold text-foreground tracking-tight">$189.45</h2>
                     <div className="flex items-center gap-2 mt-1">
-                        <span className="text-green-400 font-bold">+1.25%</span>
-                        <span className="text-white/40 text-sm">Today</span>
+                        <span className="text-emerald-600 font-bold">+1.25%</span>
+                        <span className="text-muted-foreground text-sm">Today</span>
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2 bg-white/5 p-1 rounded-lg border border-white/5">
+                <div className="flex items-center gap-2 bg-slate-100 p-1 rounded-lg border border-slate-200">
                     <button
                         onClick={() => setChartType("area")}
                         className={cn(
                             "p-2 rounded-md transition-all",
-                            chartType === "area" ? "bg-blue-500 text-white shadow-lg shadow-blue-500/20" : "text-white/40 hover:text-white hover:bg-white/5"
+                            chartType === "area" ? "bg-white text-primary shadow-sm" : "text-muted-foreground hover:text-foreground hover:bg-white/50"
                         )}
                     >
                         <LineChart className="w-5 h-5" />
@@ -155,7 +154,7 @@ export function ChartWrapper() {
                         onClick={() => setChartType("candle")}
                         className={cn(
                             "p-2 rounded-md transition-all",
-                            chartType === "candle" ? "bg-blue-500 text-white shadow-lg shadow-blue-500/20" : "text-white/40 hover:text-white hover:bg-white/5"
+                            chartType === "candle" ? "bg-white text-primary shadow-sm" : "text-muted-foreground hover:text-foreground hover:bg-white/50"
                         )}
                     >
                         <CandlestickChart className="w-5 h-5" />
@@ -173,8 +172,8 @@ export function ChartWrapper() {
                         className={cn(
                             "px-4 py-1.5 rounded-full text-xs font-bold transition-all border border-transparent",
                             activeTimeframe === tf
-                                ? "bg-white text-black"
-                                : "text-white/40 hover:text-white hover:border-white/10"
+                                ? "bg-slate-900 text-white"
+                                : "text-muted-foreground hover:text-foreground hover:bg-slate-100"
                         )}
                     >
                         {tf}

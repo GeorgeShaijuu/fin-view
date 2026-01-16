@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { ArrowRight, Apple, Play } from "lucide-react";
@@ -66,13 +67,13 @@ export function HeroSection() {
                         </p>
 
                         <div className="flex flex-wrap items-center gap-4">
-                            <button className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-full font-semibold transition-all shadow-lg shadow-primary/25 flex items-center gap-2">
+                            <Link href="/trade" className="px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-full font-semibold transition-all shadow-lg shadow-primary/25 flex items-center gap-2">
                                 Start Trading
                                 <ArrowRight className="w-5 h-5" />
-                            </button>
-                            <button className="px-8 py-4 bg-white hover:bg-secondary text-foreground rounded-full font-semibold transition-all border border-border flex items-center gap-2">
+                            </Link>
+                            <Link href="/trade" className="px-8 py-4 bg-white hover:bg-secondary text-foreground rounded-full font-semibold transition-all border border-border flex items-center gap-2">
                                 Try Demo
-                            </button>
+                            </Link>
                         </div>
                     </div>
 
