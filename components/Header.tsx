@@ -1,48 +1,50 @@
 import Link from "next/link";
-import { Search, Bell, Settings } from "lucide-react";
+import { LogIn } from "lucide-react";
 
 export function Header() {
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between glass">
-            <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold">
-                    F
-                </div>
-                <span className="text-xl font-bold tracking-tight text-white">Finview</span>
-            </div>
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-border/50">
+            <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+                <Link href="/" className="flex items-center gap-2">
+                    <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </div>
+                    <span className="text-2xl font-bold tracking-tight text-foreground">Finview</span>
+                </Link>
 
-            <nav className="hidden md:flex items-center gap-8">
-                <Link href="/" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
-                    Dashboard
-                </Link>
-                <Link href="/portfolio" className="text-sm font-medium text-white/60 hover:text-white transition-colors">
-                    Portfolio
-                </Link>
-                <Link href="/markets" className="text-sm font-medium text-white/60 hover:text-white transition-colors">
-                    Markets
-                </Link>
-                <Link href="/news" className="text-sm font-medium text-white/60 hover:text-white transition-colors">
-                    News
-                </Link>
-            </nav>
+                <nav className="hidden md:flex items-center gap-10">
+                    <Link href="#trade" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                        Trade
+                    </Link>
+                    <Link href="#markets" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                        Markets
+                    </Link>
+                    <Link href="#education" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                        Education
+                    </Link>
+                    <Link href="#analytics" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                        Analytics
+                    </Link>
+                </nav>
 
-            <div className="flex items-center gap-4">
-                <div className="relative hidden sm:block">
-                    <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-white/40" />
-                    <input
-                        type="text"
-                        placeholder="Search stocks..."
-                        className="bg-white/5 border border-white/10 rounded-full pl-10 pr-4 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-blue-500 w-64 transition-all"
-                    />
+                <div className="flex items-center gap-4">
+                    <button className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hidden sm:block">
+                        RU
+                    </button>
+                    <Link
+                        href="/login"
+                        className="px-6 py-2.5 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full transition-colors flex items-center gap-2"
+                    >
+                        Sign Up
+                    </Link>
+                    <button className="p-2 text-muted-foreground hover:text-foreground transition-colors">
+                        <LogIn className="w-5 h-5" />
+                    </button>
                 </div>
-                <button className="p-2 text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-colors relative">
-                    <Bell className="w-5 h-5" />
-                    <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
-                </button>
-                <button className="p-2 text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-colors">
-                    <Settings className="w-5 h-5" />
-                </button>
-                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 border border-white/20"></div>
             </div>
         </header>
     );
